@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaphet Bekele — Computer Science & Cognitive Science</title>
+  <meta name="description" content="Portfolio of Yaphet Bekele — Computer Science & Cognitive Science at USC." />
+
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #e9edf4;
+      overflow-x: hidden;
+      background: #0e1016;
+      line-height: 1.6;
+    }
+
+    /* Canvas background */
+    #code-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      background: #0e1016;
+    }
+
+    header, main, footer { position: relative; z-index: 10; }
+
+    header {
+      position: sticky; top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(14,16,22,0.82);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav {
+      max-width: 1100px; margin: 0 auto;
+      padding: 12px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; }
+    .dot { width:10px; height:10px; border-radius:50%; background:#7c5cff; box-shadow:0 0 12px #7c5cff; }
+
+    .navlinks a {
+      color:#a8b0c2; text-decoration:none; padding:8px 10px; border-radius:10px;
+    }
+    .navlinks a:hover { background: rgba(255,255,255,0.08); color:#fff; }
+
+    .cta {
+      background: linear-gradient(90deg, #7c5cff, #a089ff);
+      color:#0b0b0b; font-weight:700; padding:8px 14px; border-radius:12px; text-decoration:none;
+    }
+
+    main { max-width:1100px; margin:0 auto; padding:40px 20px 80px; }
+
+    h1 {
+      font-size: clamp(2rem, 2.6vw + 1rem, 3rem);
+      margin: 0 0 12px;
+      background: linear-gradient(90deg, #fff, #ffc72c);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    h2 { margin: 32px 0 10px; font-size: 1.4rem; }
+    h3 { margin: 12px 0 6px; }
+
+    .muted { color:#a8b0c2; }
+    .card {
+      background: rgba(19,24,38,0.75);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .chip {
+      display:inline-block; background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px; padding: 6px 10px; margin: 4px 6px 0 0; font-size: 0.9rem;
+    }
+    .two-col { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    .pill { display:inline-block; background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 12px; margin:4px 6px 0 0; }
+
+    ul.clean { margin: 6px 0 0; padding-left: 18px; }
+    a { color:#e9edf4; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; padding: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #a8b0c2;
+    }
+
+    @media (max-width: 880px) {
+      main { padding: 20px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="code-bg"></canvas>
+
+  <header>
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> Yaphet Bekele</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h1>Computer Science & Cognitive Science</h1>
+      <p class="muted">
+        I’m Yaphet Bekele (USC, Viterbi). I build human-centered software at the intersection of intelligent systems and cognition —
+        from ML-powered products to reliable backends and expressive UIs.
+      </p>
+      <div>
+        <span class="chip">Software Engineering</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Human-Computer Interaction</span>
+        <span class="chip">Systems & Networking</span>
+        <span class="chip">Data-Driven Design</span>
+      </div>
+      <p class="muted" style="margin-top:8px">Los Angeles, CA • Graduation: May 2027</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <h3>University of Southern California, Viterbi School of Engineering</h3>
+      <p class="muted">B.S. in Computer Science • Minor in Cognitive Science — May 2027 • Los Angeles, CA</p>
+      <p class="muted"><strong>Relevant Coursework:</strong> Computer Architecture, Software Development & Concurrent Programming, Data Structures & Algorithms, Computer Theory & Algorithms, Multivariable Calculus, Linear Algebra, Accelerated Programming in Python</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Technical Skills</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Languages:</strong></p>
+          <div>
+            <span class="pill">C++</span><span class="pill">Python</span><span class="pill">Java</span>
+            <span class="pill">TypeScript</span><span class="pill">Golang</span><span class="pill">C#</span>
+            <span class="pill">SQL</span><span class="pill">GraphQL</span><span class="pill">JavaScript</span>
+            <span class="pill">HTML/CSS</span>
+          </div>
+        </div>
+        <div>
+          <p><strong>Frameworks:</strong></p>
+          <div>
+            <span class="pill">Drogon</span><span class="pill">Next.js</span><span class="pill">React.js</span>
+            <span class="pill">Spring Boot</span><span class="pill">Django</span><span class="pill">Material UI</span>
+            <span class="pill">Praat</span>
+          </div>
+          <p style="margin-top:10px"><strong>Tools:</strong></p>
+          <div>
+            <span class="pill">Flask</span><span class="pill">Eclipse</span><span class="pill">Firebase</span>
+            <span class="pill">Postgres</span><span class="pill">Git/GitHub</span><span class="pill">Vercel</span>
+            <span class="pill">MySQL</span><span class="pill">Linux</span><span class="pill">Jupyter</span>
+            <span class="pill">Docker</span><span class="pill">Pandas</span><span class="pill">Node.js</span>
+            <span class="pill">Adobe Photoshop</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+
+      <h3>Tech Developer Intern — Sponsors For Educational Opportunity (SEO)</h3>
+      <p class="muted">Remote • Jun 2025 – Aug 2025</p>
+      <ul class="clean">
+        <li>Led backend development of a trading advice platform integrating Finnhub’s API to deliver company financial data; enabled users to explore market trends/projections and generated ~$400 user profit in a month.</li>
+        <li>Completed 300+ hours of rigorous SE training on data structures and full-stack app development in SCRUM teams (Flask, MySQL, HTML/CSS/JS, API integrations).</li>
+      </ul>
+
+      <h3>Software Engineer Intern — Cryda Tech</h3>
+      <p class="muted">Los Angeles, CA • Jun 2024 – Aug 2024</p>
+      <ul class="clean">
+        <li>Built an AI-powered media website with automated articles (OpenAI + React), reducing manual publishing workload and increasing article output and news dispersal by ~50%.</li>
+        <li>Engineered a dynamic, responsive UI using Axios and Material UI (AppBar/Toolbar), enhancing mobile usability following workshops and mentoring.</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <h3>Profectus Investment App</h3>
+      <p class="muted">Python, Node.js, PostgreSQL, Flask, HTML/CSS</p>
+      <ul class="clean">
+        <li>Rounds up each PayPal transaction and auto-invests (~$0.73 per purchase; ~$250 over three months) via PayPal SDK/API with a Python Flask backend and Node.js frontend.</li>
+        <li>Built portfolio dashboards with AI forecasts (RAG over PostgreSQL) achieving ~85% accuracy against back-tested S&P scenarios.</li>
+      </ul>
+
+      <h3>FùtBet Fantasy Football App</h3>
+      <p class="muted">C++ (Drogon), TypeScript, React.js, GraphQL, Plotly</p>
+      <ul class="clean">
+        <li>Full-stack app in C++ allowing friends to build virtual teams and compete using real game performance; integrates Twitter API to analyze live tweets for selection advice with Plotly visualizations.</li>
+        <li>Constructed a GraphQL API for fast live/historical player stat queries, reducing search times by ~9% and handling high concurrency smoothly.</li>
+      </ul>
+
+      <h3>Phonetico</h3>
+      <p class="muted">Java, Spring Boot, Next.js, OpenAI, Praat</p>
+      <ul class="clean">
+        <li>Speech-therapy web app simulating real-world conversations; achieved ~60% increase in user speech intelligibility.</li>
+        <li>Streamed AI dialogue via Spring Boot (SSE/WebSocket) with Praat-based analysis.</li>
+      </ul>
+
+      <h3>DigiCards</h3>
+      <p class="muted">Golang, JavaScript, Vercel, Clerk, Paddle</p>
+      <ul class="clean">
+        <li>SaaS for composing, comparing, and managing flashcards to improve study efficiency.</li>
+        <li>Implemented secure subscriptions with Paddle (tiered plans) and authentication with Clerk for controlled access.</li>
+      </ul>
+    </section>
+
+    <!-- LEADERSHIP & PROFESSIONAL DEVELOPMENT -->
+    <section id="leadership" class="card">
+      <h2>Leadership & Professional Development</h2>
+
+      <h3>Phonetics Software Student Researcher — USC Center for AI in Society</h3>
+      <p class="muted">Los Angeles, CA • Sep 2024 – Present</p>
+      <ul class="clean">
+        <li>Assembled a conversational bot that isolates speech to detect vocal nuances with ~93% accuracy using Praat.</li>
+        <li>Built a “guess the word” mode with ~99% accuracy; backend in Spring Boot.</li>
+      </ul>
+
+      <h3>Co-Founder & President — INTERACT Rotary Organization</h3>
+      <p class="muted">Addis Ababa, Ethiopia • May 2023 – Present</p>
+      <ul class="clean">
+        <li>Led 130 members from multiple high schools; raised ~700,000 ETB for school restoration in war-affected regions.</li>
+        <li>Coordinated networking events/workshops and partnerships with sponsors & local NGOs to support startups and small enterprises.</li>
+      </ul>
+
+      <h3>Software Engineer Fellow — Management Leadership for Tomorrow</h3>
+      <p class="muted">Remote • Aug 2024 – Present</p>
+      <ul class="clean">
+        <li>Accepted into a selective program for high-achieving diverse talent; focused on leadership and technical excellence with industry networking.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p class="muted" style="margin:8px 0">Los Angeles, CA</p>
+      <p style="margin:8px 0">
+        <a href="mailto:ybekele@usc.edu">ybekele@usc.edu</a> •
+        <a href="tel:+14047076168">+1 (404) 707-6168</a>
+      </p>
+      <p style="margin:8px 0">
+        <a href="https://linkedin.com/in/yaphetbekele" target="_blank" rel="noopener">LinkedIn</a> •
+        <a href="https://github.com/Yaph123" target="_blank" rel="noopener">GitHub</a>
+      </p>
+      <p class="muted" style="margin:8px 0">
+        Download résumé (PDF): <a href="Bekele_Yaphet.pdf" download>Bekele_Yaphet.pdf</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Yaphet Bekele • Built with HTML, CSS & Canvas Animation
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // === Animated background "code rain" ===
+    const canvas = document.getElementById('code-bg');
+    const ctx = canvas.getContext('2d');
+
+    function sizeCanvas(){
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      ctx.font = fontSize + 'px monospace';
+    }
+
+    const symbols = '0123456789ABCDEF{}[]()<>+-*/=|!$#@&%?';
+    const fontSize = 16;
+    let columns, drops;
+
+    function initDrops(){
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1 + Math.random() * 10);
+    }
+
+    function draw() {
+      // translucent layer for trailing effect
+      ctx.fillStyle = 'rgba(14,16,22,0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < drops.length; i++) {
+        const char = symbols[Math.floor(Math.random() * symbols.length)];
+        const hue = (i * 22 + Date.now() / 25) % 360;
+        ctx.fillStyle = `hsl(${hue}, 80%, 60%)`;
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+        // reset occasionally when off screen
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i] += 0.9 + Math.random() * 0.6; // varied speed
+      }
+    }
+
+    // init
+    sizeCanvas(); initDrops();
+    let timer = setInterval(draw, 40);
+
+    window.addEventListener('resize', () => {
+      clearInterval(timer);
+      sizeCanvas(); initDrops();
+      timer = setInterval(draw, 40);
+    });
+  </script>
+</body>
+</html>
+
+
