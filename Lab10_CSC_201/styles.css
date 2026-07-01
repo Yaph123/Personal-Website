@@ -113,11 +113,15 @@ body {
 }
 
 .hero .lead {
-  margin: 0 auto 2rem;
-  max-width: 36rem;
+  margin: 0 auto 1.1rem;
+  max-width: 40rem;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--muted);
+}
+
+.hero .lead:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .hero-actions {
