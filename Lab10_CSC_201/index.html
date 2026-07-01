@@ -1,313 +1,278 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yaphet Bekele — Computer Science & Cognitive Science</title>
-  <meta name="description" content="Portfolio of Yaphet Bekele — Computer Science & Cognitive Science at USC." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yaphet Bekele — Computer Science &amp; Cognitive Science</title>
+  <meta name="description" content="Portfolio of Yaphet Yohannes Bekele — USC CS + Cognitive Science student building research tools and full-stack systems." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <canvas id="code-bg"></canvas>
+  <div class="gradient-bg" aria-hidden="true"></div>
 
-  <header>
-    <div class="nav">
-      <div class="brand"><span class="dot"></span> Yaphet Bekele</div>
-      <div class="navlinks">
-        <a href="#about">About</a>
-        <a href="#what-i-do">What I Do</a>
-        <a href="#work">Work</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact" class="cta">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO + ABOUT -->
-    <section id="about" class="card hero">
-      <div>
-        <h1>
-          <span class="title-main">Computer Science</span>
-          &amp;
-          <span class="title-accent">Cognitive Science</span>
-        </h1>
-        <p class="muted">
-          I’m Yaphet Bekele — born in Addis Ababa, raised between cultures, and now double-majoring
-          in Computer Science and Cognitive Science at USC. I love building systems that feel smart,
-          human, and intentional — blending my engineering background with my interest in
-          psychoanalytic theory to understand how people think, behave, and interact with technology.
-        </p>
-
-        <p class="muted">
-          Whether it’s an investment tool, a speech-therapy app, or an AI-powered interface, I try to 
-          layer human psychology into design decisions — especially when it comes to client-side
-          prioritization and user experience.
-        </p>
-
-        <div class="chip-row">
-          <span class="chip">Software Engineering</span>
-          <span class="chip">Machine Learning</span>
-          <span class="chip">Human-Centered Design</span>
-          <span class="chip">Cognitive Systems</span>
-          <span class="chip">Psychoanalytic UX Thinking</span>
+  <div class="page">
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-inner">
+            <h1>Hi, I'm <span class="name-gradient">Yaphet Bekele</span></h1>
+            <p class="subtitle">Software Engineer · USC CS &amp; Cognitive Science</p>
+            <p class="lead">
+              I build systems at the intersection of software and how people think — from research tooling
+              and speech ML to full-stack products. Studying Computer Science and Cognitive Science at USC
+              (December 2027), with a focus on turning ideas into shipped, measurable work.
+            </p>
+            <div class="hero-actions">
+              <a class="glass-button" href="mailto:ybekele@usc.edu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Send Email
+              </a>
+              <a class="glass-button" href="https://linkedin.com/in/yaphetbekele" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a class="glass-button" href="https://github.com/Yaph123" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <a class="scroll-hint" href="#experience" aria-label="Scroll to experience">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
         </div>
+      </section>
 
-        <p class="muted" style="margin-top:10px;">Los Angeles, CA • Graduation: May 2027</p>
-      </div>
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="container section-narrow">
+          <h2 class="section-title">Experience</h2>
+          <div class="experience-list">
 
-      <div>
-        <div class="tile">
-          <span class="label-pill">At a glance</span>
-          <p class="muted" style="margin-top:8px;">
-            Double major in Computer Science and Cognitive Science at the
-            <strong>University of Southern California</strong>.
-          </p>
-          <p class="muted">
-            I explore full-stack development, human-computer interaction, AI, and cognitive systems
-            through coursework like <em>Computer Systems, Software Development & Concurrent Programming,
-            Data Structures & Algorithms, Computer Theory & Algorithms, Multivariable Calculus,</em>
-            and <em>Accelerated Programming in Python</em>.
-          </p>
-        </div>
-      </div>
-    </section>
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/true-believer.png" alt="True Believer logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>SWE + TPM</h3>
+                  <p class="experience-meta">True Believer · New York, NY</p>
+                  <p class="experience-date">Jun 2026 – Aug 2026</p>
+                  <p>Cross-functional program management for product and engineering initiatives in a fast-paced startup environment.</p>
+                </div>
+              </div>
+            </article>
 
-    <!-- WHAT I DO -->
-    <section id="what-i-do" class="card">
-      <div class="section-title-row">
-        <h2>What I Work On</h2>
-        <p class="section-tagline">Blending software engineering, ML, and human-centered thinking.</p>
-      </div>
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/handshake.png" alt="Handshake logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>AI / ML Fellow</h3>
+                  <p class="experience-meta">Handshake · Remote</p>
+                  <p class="experience-date">2025 – Present</p>
+                  <p>Applied ML workflows and evaluation for career-tech products; collaborated on data pipelines and model integration.</p>
+                </div>
+              </div>
+            </article>
 
-      <div class="three-col">
-        <div class="tile">
-          <span class="label-pill">Intelligent Systems</span>
-          <p class="muted">
-            I design and ship systems that make data and AI feel approachable — whether it’s an
-            investment app that quietly rounds up purchases into an auto-investing portfolio
-            (Profectus), or research prototypes that analyze speech patterns using Praat and
-            Spring Boot.
-          </p>
-          <div>
-            <span class="pill">Python</span><span class="pill">Flask</span><span class="pill">Pandas</span>
-            <span class="pill">PostgreSQL</span><span class="pill">Praat</span>
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/usc.png" alt="USC logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>Research Assistant</h3>
+                  <p class="experience-meta">USC Center for AI in Society (CAIS) · Speech &amp; Language</p>
+                  <p class="experience-date">2024 – Present</p>
+                  <p>Speech recognition and NLP research — data preprocessing, model experimentation, and analysis for clinical and social-impact applications.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/seo.png" alt="SEO logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>SWE + PM</h3>
+                  <p class="experience-meta">SEO (Sponsors for Educational Opportunity) · Remote</p>
+                  <p class="experience-date">2024 – 2025</p>
+                  <p>Owned product roadmap and stakeholder communication for an education nonprofit; shipped features aligned with user research and program goals.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--contain logo-circle--dark">
+                  <img src="images/interact.png" alt="Interact logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>Founder</h3>
+                  <p class="experience-meta">INTERACT Rotary Club · Los Angeles, CA</p>
+                  <p class="experience-date">2023 – 2025</p>
+                  <p>Led a 40+ member service organization — event planning, fundraising, and community partnerships across LA.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--contain logo-circle--dark">
+                  <img src="images/mlt.png" alt="MLT logo" />
+                </div>
+                <div class="experience-body">
+                  <h3>Career Prep Fellow</h3>
+                  <p class="experience-meta">Management Leadership for Tomorrow (MLT)</p>
+                  <p class="experience-date">2023 – Present</p>
+                  <p>Professional development, leadership training, and career coaching through MLT's flagship undergraduate program.</p>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
+      </section>
 
-        <div class="tile">
-          <span class="label-pill">Full-stack Engineering</span>
-          <p class="muted">
-            I’m comfortable moving from backend APIs to front-end experiences: building C++/Go and
-            Java services, wiring up SQL/GraphQL layers, and crafting interfaces with React, Next.js,
-            or clean HTML/CSS to make complex products feel simple.
-          </p>
-          <div>
-            <span class="pill">C++</span><span class="pill">Golang</span><span class="pill">Java</span>
-            <span class="pill">Spring Boot</span><span class="pill">React / Next.js</span>
-            <span class="pill">GraphQL</span><span class="pill">SQL</span>
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <div class="container section-wide">
+          <h2 class="section-title">My Projects</h2>
+          <div class="project-grid">
+
+            <article class="glass-card project-card">
+              <div class="project-icon glass">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3>Mimir (CogLab) — Research OS</h3>
+              <p class="desc">Local-first desktop app for psychology and cognitive science research — structured notebook, artifact graph, bounded AI agents, and manuscript export.</p>
+              <div class="tag-row">
+                <span class="tag">Rust</span>
+                <span class="tag">Tauri</span>
+                <span class="tag">React</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">LLM</span>
+              </div>
+              <div class="project-footer">
+                <a class="glass-button" href="https://github.com/Yaph123/Research-OS" target="_blank" rel="noopener noreferrer">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  View Code
+                </a>
+              </div>
+            </article>
+
+            <article class="glass-card project-card">
+              <div class="project-icon glass">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3>Profectus</h3>
+              <p class="desc">Full-stack platform for student organizations — event management, member tracking, and analytics dashboards.</p>
+              <div class="tag-row">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <div class="project-footer">
+                <a class="glass-button" href="https://github.com/Yaph123" target="_blank" rel="noopener noreferrer">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  View Code
+                </a>
+              </div>
+            </article>
+
+            <article class="glass-card project-card">
+              <div class="project-icon glass">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3>FutBet</h3>
+              <p class="desc">Soccer betting analytics web app with live odds integration, user portfolios, and predictive modeling.</p>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-footer">
+                <a class="glass-button" href="https://github.com/Yaph123" target="_blank" rel="noopener noreferrer">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  View Code
+                </a>
+              </div>
+            </article>
+
+            <article class="glass-card project-card">
+              <div class="project-icon glass">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3>Speech Recognition Pipeline</h3>
+              <p class="desc">End-to-end ASR pipeline for clinical speech data — preprocessing, feature extraction, and model evaluation at USC CAIS.</p>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">NLP</span>
+              </div>
+              <div class="project-footer">
+                <a class="glass-button" href="mailto:ybekele@usc.edu">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Contact
+                </a>
+              </div>
+            </article>
+
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="tile">
-          <span class="label-pill">People & Impact</span>
-          <p class="muted">
-            Outside of code, I lead teams and community projects — from growing a 130-member
-            INTERACT Rotary organization and raising ~700,000 ETB for school restoration, to building
-            accessible speech-therapy tools through USC’s Center for AI in Society.
-          </p>
-          <div>
-            <span class="pill">Leadership</span><span class="pill">Mentorship</span>
-            <span class="pill">Community Impact</span><span class="pill">Public Speaking</span>
-          </div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-social">
+          <a href="https://github.com/Yaph123" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/yaphetbekele" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="mailto:ybekele@usc.edu" aria-label="Email">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819v9.273L12 8.094l6.545 4.91V3.821h3.819A1.636 1.636 0 0 1 24 5.457z" />
+            </svg>
+          </a>
         </div>
+        <p class="footer-note">Los Angeles, CA · USC · December 2027</p>
       </div>
-    </section>
-
-    <!-- SELECTED WORK -->
-    <section id="work" class="card">
-      <div class="section-title-row">
-        <h2>Selected Work</h2>
-        <p class="section-tagline">A few things I’ve built & contributed to recently.</p>
-      </div>
-
-      <div class="work-grid">
-        <div class="work-highlight">
-          <span class="label-pill">AI-powered products</span>
-          <h3>Investment & media tools</h3>
-          <p class="work-meta">Python, Flask, Node.js, React, PostgreSQL, APIs</p>
-          <p class="muted">
-            I helped design an investment app that quietly rounds up PayPal purchases and routes the
-            spare change into an automated portfolio (Profectus), using Python, Flask, and the PayPal
-            SDK to coordinate transactions and analytics over PostgreSQL.
-          </p>
-          <p class="muted">
-            I’ve also worked on AI-assisted media tooling — building a news platform that pulls in
-            content via OpenAI and surfaces it through a responsive React interface, cutting manual
-            publishing work and boosting article output.
-          </p>
-        </div>
-
-        <div class="work-highlight">
-          <span class="label-pill">Real-time & social experiences</span>
-          <h3>Fantasy football & speech tech</h3>
-          <p class="work-meta">C++ (Drogon), TypeScript, GraphQL, Spring Boot, Praat</p>
-          <p class="muted">
-            I enjoy systems where data moves in real time. FùtBet started as a C++ side project and
-            became a full fantasy football experience with a Drogon backend, GraphQL API, and a
-            TypeScript / React front-end for live stats and visualizations.
-          </p>
-          <p class="muted">
-            On the research side, I work on speech-technology tools: web apps that simulate
-            conversations, analyze vocal features through Praat, and stream AI guidance via
-            Spring Boot — all aimed at making speech practice more accessible.
-          </p>
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:18px;">
-        You can find more experiments and projects on
-        <a href="https://github.com/Yaph123" target="_blank" rel="noopener">my GitHub</a>.
-      </p>
-    </section>
-
-    <!-- JOURNEY -->
-    <section id="journey" class="card">
-      <div class="section-title-row">
-        <h2>Journey</h2>
-        <p class="section-tagline">Where I’ve been — and why I build the way I do.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Tech Developer Intern — SEO</h3>
-          <p class="muted">Remote • 2025</p>
-          <p class="muted">
-            Joined SEO’s intensive engineering track — 300+ hours of full-stack work, system design,
-            and project-based development. I learned how to think in systems, move quickly in teams,
-            and build products people actually want to use.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Software Engineer Intern — Cryda Tech</h3>
-          <p class="muted">Los Angeles • 2024</p>
-          <p class="muted">
-            Built AI-powered publishing tools and redesigned the product’s interface from the ground up.
-            It taught me how subtle design decisions shape how people read, scroll, and interact —
-            which pushed me deeper into human-centered engineering.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Speech Tech Research — USC CAIS</h3>
-          <p class="muted">Los Angeles • 2024–Present</p>
-          <p class="muted">
-            I work on speech-analysis tools that blend engineering and the mind — combining Praat,
-            real-time analysis, and conversational AI to support accessibility and language learning.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Co-Founder — INTERACT Rotary</h3>
-          <p class="muted">Addis Ababa • 2023–Present</p>
-          <p class="muted">
-            Co-founded a 130-member community organization focused on rebuilding schools and supporting
-            youth initiatives. Leadership here shaped how I approach teamwork and impact in tech.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Software Engineer Fellow — MLT</h3>
-          <p class="muted">Remote • 2024–Present</p>
-          <p class="muted">
-            Developing both the technical and interpersonal sides of engineering — mentorship, career
-            development, and building long-term habits that scale with ambition.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card">
-      <div class="section-title-row">
-        <h2>Let’s Talk</h2>
-        <p class="section-tagline">Open to internships, research, and collaborations.</p>
-      </div>
-
-      <p class="muted" style="margin:8px 0">Based in Los Angeles, CA.</p>
-      <p style="margin:8px 0">
-        <a href="mailto:ybekele@usc.edu">ybekele@usc.edu</a> •
-        <a href="tel:+14047076168">+1 (404) 707-6168</a>
-      </p>
-      <p style="margin:8px 0">
-        <a href="https://linkedin.com/in/yaphetbekele" target="_blank" rel="noopener">LinkedIn</a> •
-        <a href="https://github.com/Yaph123" target="_blank" rel="noopener">GitHub</a>
-      </p>
-      <p class="muted" style="margin:8px 0">
-        Résumé (PDF): <a href="Bekele_Yaphet.pdf" download>Bekele_Yaphet.pdf</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="y"></span> Yaphet Bekele • Built with HTML, CSS & Canvas Animation • Originally from Addis Ababa, Ethiopia
-  </footer>
-
-  <script>
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // === Animated background "code rain" ===
-    const canvas = document.getElementById('code-bg');
-    const ctx = canvas.getContext('2d');
-
-    const symbols = '0123456789ABCDEF{}[]()<>+-*/=|!$#@&%?';
-    const fontSize = 16;
-    let columns, drops;
-
-    function sizeCanvas(){
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      ctx.font = fontSize + 'px monospace';
-    }
-
-    function initDrops(){
-      columns = Math.floor(canvas.width / fontSize);
-      drops = Array(columns).fill(1 + Math.random() * 10);
-    }
-
-    function draw() {
-      // translucent layer for trailing effect
-      ctx.fillStyle = 'rgba(14,16,22,0.15)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      for (let i = 0; i < drops.length; i++) {
-        const char = symbols[Math.floor(Math.random() * symbols.length)];
-        const hue = (i * 22 + Date.now() / 25) % 360;
-        ctx.fillStyle = `hsl(${hue}, 80%, 60%)`;
-        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-
-        // reset occasionally when off screen
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i] += 0.9 + Math.random() * 0.6; // varied speed
-      }
-    }
-
-    // init
-    sizeCanvas();
-    initDrops();
-    let timer = setInterval(draw, 40);
-
-    window.addEventListener('resize', () => {
-      clearInterval(timer);
-      sizeCanvas(); 
-      initDrops();
-      timer = setInterval(draw, 40);
-    });
-  </script>
+    </footer>
+  </div>
 </body>
 </html>
-
-
