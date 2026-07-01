@@ -14,14 +14,42 @@
       <section class="hero" id="top">
         <div class="container">
           <div class="hero-inner">
-            <h1>Hi, I'm Yaphet Bekele</h1>
-            <p class="subtitle">Engineering &amp; Product</p>
-            <p class="lead">
-              I build intelligent systems at the intersection of software, AI, and cognitive science. As a Computer Science and Cognitive Science student at USC, I am fascinated by systems thinking, how people reason, how intelligent agents make decisions, and how those principles translate into software.
-            </p>
-            <p class="lead">
-              I enjoy building across every layer of the stack, from developer tools such as language interpreters and programming infrastructure to agentic AI, research tools, speech ML, and full stack products. Whether I am designing abstractions that make developers more effective or shaping product features around the needs of users, I enjoy putting myself in their shoes and building systems that feel intuitive, useful, and thoughtfully designed.
-            </p>
+            <div class="hero-title-row">
+              <h1>Hi, I'm <span id="hero-name">Yaphet Bekele</span></h1>
+              <button type="button" class="name-toggle" id="name-toggle" aria-label="Show name in Amharic" aria-pressed="false">
+                <svg class="name-toggle-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10.3 11.2 A7.5 7.5 0 0 1 21.7 11.2" />
+                  <path d="M19.8 9.2 21.7 11.2 19.8 13.2" />
+                  <path d="M21.7 20.8 A7.5 7.5 0 0 1 10.3 20.8" />
+                  <path d="M12.2 22.8 10.3 20.8 12.2 18.8" />
+                </svg>
+              </button>
+            </div>
+            <p class="subtitle" id="hero-subtitle">Engineering &amp; Product</p>
+            <div id="hero-bio">
+              <div id="bio-english">
+                <p class="lead">
+                  I build intelligent systems at the intersection of software, AI, and cognitive science. As a Computer Science and Cognitive Science student at USC, I am fascinated by systems thinking, how people reason, how intelligent agents make decisions, and how those principles translate into software.
+                </p>
+                <p class="lead">
+                  I enjoy building across every layer of the stack, from developer tools such as language interpreters and programming infrastructure to agentic AI, research tools, speech ML, and full stack products. Whether I am designing abstractions that make developers more effective or shaping product features around the needs of users, I enjoy putting myself in their shoes and building systems that feel intuitive, useful, and thoughtfully designed.
+                </p>
+              </div>
+              <div id="bio-story" hidden>
+                <p class="lead">
+                  I was born in Addis Ababa, Ethiopia, where I grew up believing that the most meaningful work is measured by the people it helps. For much of my childhood, I thought the best path to creating that impact was through law and community advocacy, which led me to organize initiatives and become deeply involved in serving my local community.
+                </p>
+                <p class="lead">
+                  After moving to the United States, my perspective expanded. I realized that technology has an unparalleled ability to scale ideas and improve lives across borders. That realization naturally drew me toward Computer Science and Cognitive Science at USC, where I explore how intelligent systems can amplify human potential.
+                </p>
+                <p class="lead">
+                  Today, whether I am building AI systems, developer tools, or user-facing products, I start from the same question: how does this improve someone's life? I enjoy putting myself in the shoes of the people I am building for, whether they are developers, researchers, or everyday users, and creating systems that are not only technically elegant but genuinely useful.
+                </p>
+                <p class="lead">
+                  My goal has remained the same throughout my journey. Only the medium has changed, from law to technology, because I believe software is one of the most powerful tools for creating lasting global impact.
+                </p>
+              </div>
+            </div>
             <div class="hero-actions">
               <a class="glass-button" href="mailto:ybekele@usc.edu">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -51,11 +79,12 @@
         </div>
       </section>
 
-      <!-- Experience -->
+      <!-- Experience / Books -->
       <section class="section" id="experience">
         <div class="container section-narrow">
-          <h2 class="section-title">Experience</h2>
-          <div class="experience-list">
+          <h2 class="section-title" id="section-toggle-title">Experience</h2>
+
+          <div id="experience-panel" class="experience-list">
 
             <article class="glass-card">
               <div class="experience-row">
@@ -123,6 +152,66 @@
                   <p class="experience-meta">Management Leadership for Tomorrow (MLT)</p>
                   <p class="experience-date">2023 – Present</p>
                   <p>Professional development, leadership training, and career coaching through MLT's flagship undergraduate program.</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div id="books-panel" class="experience-list" hidden>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/monte-cristo.png" alt="The Count of Monte Cristo cover" />
+                </div>
+                <div class="experience-body">
+                  <h3>The Count of Monte Cristo</h3>
+                  <p class="experience-meta">Alexandre Dumas · Novel</p>
+                  <p class="experience-date">1844</p>
+                  <p>A sweeping story of betrayal, imprisonment, and calculated revenge — and what justice costs when it finally arrives.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/brothers-karamazov.png" alt="The Brothers Karamazov cover" />
+                </div>
+                <div class="experience-body">
+                  <h3>The Brothers Karamazov</h3>
+                  <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
+                  <p class="experience-date">1880</p>
+                  <p>Faith, doubt, and moral responsibility collide in a family drama that asks what it means to live an examined life.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/crime-punishment.png" alt="Crime and Punishment cover" />
+                </div>
+                <div class="experience-body">
+                  <h3>Crime and Punishment</h3>
+                  <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
+                  <p class="experience-date">1866</p>
+                  <p>A psychological descent into guilt and rationalization — and the slow, painful path back toward conscience.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <div class="experience-row">
+                <div class="logo-circle glass logo-circle--img logo-circle--fill">
+                  <img src="images/dantes-inferno.png" alt="Dante's Inferno cover" />
+                </div>
+                <div class="experience-body">
+                  <h3>Dante's Inferno</h3>
+                  <p class="experience-meta">Dante Alighieri · Epic Poetry</p>
+                  <p class="experience-date">c. 1320</p>
+                  <p>A guided journey through the circles of Hell — a meditation on sin, consequence, and the moral architecture of the soul.</p>
                 </div>
               </div>
             </article>
@@ -259,5 +348,41 @@
       </div>
     </footer>
   </div>
+  <script>
+    (function () {
+      var nameEl = document.getElementById('hero-name');
+      var toggle = document.getElementById('name-toggle');
+      var subtitleEl = document.getElementById('hero-subtitle');
+      var bioEnglish = document.getElementById('bio-english');
+      var bioStory = document.getElementById('bio-story');
+      var sectionTitle = document.getElementById('section-toggle-title');
+      var experiencePanel = document.getElementById('experience-panel');
+      var booksPanel = document.getElementById('books-panel');
+      if (!nameEl || !toggle || !subtitleEl || !bioEnglish || !bioStory || !sectionTitle || !experiencePanel || !booksPanel) return;
+
+      var english = 'Yaphet Bekele';
+      var amharic = 'ያፌት በቀለ';
+      var subtitleEnglish = 'Engineering & Product';
+      var subtitleStory = 'Purpose & Perspective';
+      var showingAmharic = false;
+
+      toggle.addEventListener('click', function () {
+        showingAmharic = !showingAmharic;
+        nameEl.textContent = showingAmharic ? amharic : english;
+        subtitleEl.textContent = showingAmharic ? subtitleStory : subtitleEnglish;
+        bioEnglish.hidden = showingAmharic;
+        bioStory.hidden = !showingAmharic;
+        sectionTitle.textContent = showingAmharic ? 'A Few of My Favourite Books' : 'Experience';
+        experiencePanel.hidden = showingAmharic;
+        booksPanel.hidden = !showingAmharic;
+        document.body.classList.toggle('alt-mode', showingAmharic);
+        toggle.setAttribute(
+          'aria-label',
+          showingAmharic ? 'Show name and bio in English' : 'Show name and bio in Amharic'
+        );
+        toggle.setAttribute('aria-pressed', showingAmharic ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>

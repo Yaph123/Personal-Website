@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -31,6 +31,61 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
+  transition: background-color 0.35s ease;
+}
+
+body.alt-mode {
+  background: #f2f0ea;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+}
+
+body.alt-mode .hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.75rem, 5vw + 1rem, 3.85rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+body.alt-mode .hero .subtitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+body.alt-mode .hero .lead,
+body.alt-mode #hero-bio .lead {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: 0.015em;
+}
+
+body.alt-mode .experience-body p,
+body.alt-mode .project-card .desc,
+body.alt-mode .footer-note {
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.8;
+}
+
+body.alt-mode .section-title,
+body.alt-mode .experience-body h3,
+body.alt-mode .experience-meta,
+body.alt-mode .project-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+body.alt-mode .section-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+body.alt-mode .experience-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .page {
@@ -54,8 +109,49 @@ body {
   max-width: 42rem;
 }
 
+.hero-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+}
+
+.name-toggle {
+  flex-shrink: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #16a34a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.name-toggle-icon {
+  width: 2.35rem;
+  height: 2.35rem;
+}
+
+.name-toggle:hover {
+  color: #15803d;
+  transform: rotate(180deg);
+}
+
+.name-toggle[aria-pressed='true'] {
+  color: #15803d;
+}
+
 .hero h1 {
-  margin: 0 0 0.5rem;
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
   font-weight: 600;
@@ -65,7 +161,7 @@ body {
 }
 
 .hero .subtitle {
-  margin: 0 0 2rem;
+  margin: 1.5rem 0 1.5rem;
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 500;
@@ -82,6 +178,20 @@ body {
 
 .hero .lead:last-of-type {
   margin-bottom: 2rem;
+}
+
+#hero-bio .lead:last-child {
+  margin-bottom: 2rem;
+}
+
+#hero-bio [hidden] {
+  display: none;
+}
+
+.experience-list [hidden],
+#books-panel[hidden],
+#experience-panel[hidden] {
+  display: none;
 }
 
 .hero-actions {
