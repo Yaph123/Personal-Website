@@ -31,7 +31,23 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
-  transition: background-color 0.35s ease;
+  transition: background-color 0.45s ease, color 0.35s ease;
+}
+
+.mode-swap {
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+
+body.mode-fading .mode-swap {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .mode-swap {
+    transition: none;
+  }
 }
 
 body.alt-mode {

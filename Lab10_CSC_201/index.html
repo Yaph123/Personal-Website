@@ -13,7 +13,7 @@
       <!-- Hero -->
       <section class="hero" id="top">
         <div class="container">
-          <div class="hero-inner">
+          <div class="hero-inner mode-swap">
             <div class="hero-title-row">
               <h1>Hi, I'm <span id="hero-name">Yaphet Bekele</span></h1>
               <button type="button" class="name-toggle" id="name-toggle" aria-label="Show name in Amharic" aria-pressed="false">
@@ -81,7 +81,7 @@
 
       <!-- Experience / Books -->
       <section class="section" id="experience">
-        <div class="container section-narrow">
+        <div class="container section-narrow mode-swap">
           <h2 class="section-title" id="section-toggle-title">Experience</h2>
 
           <div id="experience-panel" class="experience-list">
@@ -365,22 +365,45 @@
       var subtitleEnglish = 'Engineering & Product';
       var subtitleStory = 'Purpose & Perspective';
       var showingAmharic = false;
+      var swapping = false;
+      var fadeMs = 320;
 
-      toggle.addEventListener('click', function () {
-        showingAmharic = !showingAmharic;
-        nameEl.textContent = showingAmharic ? amharic : english;
-        subtitleEl.textContent = showingAmharic ? subtitleStory : subtitleEnglish;
-        bioEnglish.hidden = showingAmharic;
-        bioStory.hidden = !showingAmharic;
-        sectionTitle.textContent = showingAmharic ? 'A Few of My Favourite Books' : 'Experience';
-        experiencePanel.hidden = showingAmharic;
-        booksPanel.hidden = !showingAmharic;
-        document.body.classList.toggle('alt-mode', showingAmharic);
+      function applyMode(showAlt) {
+        nameEl.textContent = showAlt ? amharic : english;
+        subtitleEl.textContent = showAlt ? subtitleStory : subtitleEnglish;
+        bioEnglish.hidden = showAlt;
+        bioStory.hidden = !showAlt;
+        sectionTitle.textContent = showAlt ? 'A Few of My Favourite Books' : 'Experience';
+        experiencePanel.hidden = showAlt;
+        booksPanel.hidden = !showAlt;
+        document.body.classList.toggle('alt-mode', showAlt);
         toggle.setAttribute(
           'aria-label',
-          showingAmharic ? 'Show name and bio in English' : 'Show name and bio in Amharic'
+          showAlt ? 'Show name and bio in English' : 'Show name and bio in Amharic'
         );
-        toggle.setAttribute('aria-pressed', showingAmharic ? 'true' : 'false');
+        toggle.setAttribute('aria-pressed', showAlt ? 'true' : 'false');
+      }
+
+      toggle.addEventListener('click', function () {
+        if (swapping) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          showingAmharic = !showingAmharic;
+          applyMode(showingAmharic);
+          return;
+        }
+
+        swapping = true;
+        document.body.classList.add('mode-fading');
+
+        setTimeout(function () {
+          showingAmharic = !showingAmharic;
+          applyMode(showingAmharic);
+          document.body.classList.remove('mode-fading');
+          setTimeout(function () {
+            swapping = false;
+          }, fadeMs);
+        }, fadeMs);
       });
     })();
   </script>
