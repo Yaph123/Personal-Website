@@ -158,61 +158,65 @@
 
           </div>
 
-          <div id="books-panel" class="experience-list" hidden>
+          <div id="books-panel" class="books-grid" hidden>
 
-            <article class="glass-card">
-              <div class="experience-row">
-                <div class="logo-circle glass logo-circle--img logo-circle--fill">
-                  <img src="images/monte-cristo.png" alt="The Count of Monte Cristo cover" />
-                </div>
-                <div class="experience-body">
-                  <h3>The Count of Monte Cristo</h3>
-                  <p class="experience-meta">Alexandre Dumas · Novel</p>
-                  <p class="experience-date">1844</p>
-                  <p>A sweeping story of betrayal, imprisonment, and calculated revenge — and what justice costs when it finally arrives.</p>
-                </div>
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/monte-cristo.png" alt="The Count of Monte Cristo cover" />
+              <div class="experience-body">
+                <h3>The Count of Monte Cristo</h3>
+                <p class="experience-meta">Alexandre Dumas · Novel</p>
+                <p class="experience-date">1844</p>
+                <p>A sweeping story of betrayal, imprisonment, and calculated revenge — and what justice costs when it finally arrives.</p>
               </div>
             </article>
 
-            <article class="glass-card">
-              <div class="experience-row">
-                <div class="logo-circle glass logo-circle--img logo-circle--fill">
-                  <img src="images/brothers-karamazov.png" alt="The Brothers Karamazov cover" />
-                </div>
-                <div class="experience-body">
-                  <h3>The Brothers Karamazov</h3>
-                  <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
-                  <p class="experience-date">1880</p>
-                  <p>Faith, doubt, and moral responsibility collide in a family drama that asks what it means to live an examined life.</p>
-                </div>
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/i-am-malala.png" alt="I Am Malala cover" />
+              <div class="experience-body">
+                <h3>I Am Malala</h3>
+                <p class="experience-meta">Malala Yousafzai · Memoir</p>
+                <p class="experience-date">2013</p>
+                <p>A powerful memoir on courage, education, and standing for your voice even in the face of fear.</p>
               </div>
             </article>
 
-            <article class="glass-card">
-              <div class="experience-row">
-                <div class="logo-circle glass logo-circle--img logo-circle--fill">
-                  <img src="images/crime-punishment.png" alt="Crime and Punishment cover" />
-                </div>
-                <div class="experience-body">
-                  <h3>Crime and Punishment</h3>
-                  <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
-                  <p class="experience-date">1866</p>
-                  <p>A psychological descent into guilt and rationalization — and the slow, painful path back toward conscience.</p>
-                </div>
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/bitcoin-standard.png" alt="The Bitcoin Standard cover" />
+              <div class="experience-body">
+                <h3>The Bitcoin Standard</h3>
+                <p class="experience-meta">Saifedean Ammous · Economics</p>
+                <p class="experience-date">2018</p>
+                <p>An exploration of monetary history and how Bitcoin fits into debates about sound money and central banking.</p>
               </div>
             </article>
 
-            <article class="glass-card">
-              <div class="experience-row">
-                <div class="logo-circle glass logo-circle--img logo-circle--fill">
-                  <img src="images/dantes-inferno.png" alt="Dante's Inferno cover" />
-                </div>
-                <div class="experience-body">
-                  <h3>Dante's Inferno</h3>
-                  <p class="experience-meta">Dante Alighieri · Epic Poetry</p>
-                  <p class="experience-date">c. 1320</p>
-                  <p>A guided journey through the circles of Hell — a meditation on sin, consequence, and the moral architecture of the soul.</p>
-                </div>
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/brothers-karamazov.png" alt="The Brothers Karamazov cover" />
+              <div class="experience-body">
+                <h3>The Brothers Karamazov</h3>
+                <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
+                <p class="experience-date">1880</p>
+                <p>Faith, doubt, and moral responsibility collide in a family drama that asks what it means to live an examined life.</p>
+              </div>
+            </article>
+
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/crime-punishment.png" alt="Crime and Punishment cover" />
+              <div class="experience-body">
+                <h3>Crime and Punishment</h3>
+                <p class="experience-meta">Fyodor Dostoevsky · Novel</p>
+                <p class="experience-date">1866</p>
+                <p>A psychological descent into guilt and rationalization — and the slow, painful path back toward conscience.</p>
+              </div>
+            </article>
+
+            <article class="glass-card book-card">
+              <img class="book-cover" src="images/dantes-inferno.png" alt="Dante's Inferno cover" />
+              <div class="experience-body">
+                <h3>Dante's Inferno</h3>
+                <p class="experience-meta">Dante Alighieri · Epic Poetry</p>
+                <p class="experience-date">c. 1320</p>
+                <p>A guided journey through the circles of Hell — a meditation on sin, consequence, and the moral architecture of the soul.</p>
               </div>
             </article>
 
@@ -224,8 +228,9 @@
                   Drop a recommendation and hit send. Add your name if you want, or leave it blank and stay anonymous.
                 </p>
                 <form
+                  id="book-recommend-form"
                   class="book-recommend-form"
-                  action="https://formsubmit.co/ybekele@usc.edu"
+                  action="https://formsubmit.co/ajax/ybekele@usc.edu"
                   method="POST"
                 >
                   <input type="hidden" name="_subject" value="New book recommendation from portfolio" />
@@ -240,7 +245,9 @@
                   ></textarea>
                   <button type="submit" class="glass-button">Send</button>
                 </form>
-                <p class="recommend-note">Thanks for sharing a recommendation.</p>
+                <p class="recommend-note" id="recommend-status" aria-live="polite">
+                  Thanks for sharing a recommendation.
+                </p>
               </div>
             </article>
 
@@ -435,6 +442,33 @@
           }, fadeMs);
         }, fadeMs);
       });
+
+      var recommendForm = document.getElementById('book-recommend-form');
+      var recommendStatus = document.getElementById('recommend-status');
+      if (recommendForm && recommendStatus) {
+        recommendForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var formData = new FormData(recommendForm);
+          recommendStatus.textContent = 'Sending...';
+
+          fetch(recommendForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' }
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error('Request failed');
+              return response.json();
+            })
+            .then(function () {
+              recommendStatus.textContent = 'Sent. Thank you for the recommendation!';
+              recommendForm.reset();
+            })
+            .catch(function () {
+              recommendStatus.textContent = 'Could not send right now. Please try again in a moment.';
+            });
+        });
+      }
     })();
   </script>
 </body>
