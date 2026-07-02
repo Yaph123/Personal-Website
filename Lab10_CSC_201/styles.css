@@ -386,6 +386,55 @@ body.alt-mode .experience-body h3 {
   margin-top: 0.65rem;
 }
 
+.book-recommend-card .experience-body {
+  width: 100%;
+}
+
+.book-recommend-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.book-recommend-form input,
+.book-recommend-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--bg-subtle);
+}
+
+.book-recommend-form textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.book-recommend-form input:focus,
+.book-recommend-form textarea:focus {
+  outline: 2px solid #a3a3a3;
+  outline-offset: 1px;
+}
+
+.book-recommend-form .glass-button {
+  width: fit-content;
+}
+
+.recommend-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+body.alt-mode .book-recommend-form input,
+body.alt-mode .book-recommend-form textarea {
+  font-family: 'Lora', Georgia, serif;
+}
+
 /* Projects */
 .project-grid {
   display: grid;

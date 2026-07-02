@@ -216,6 +216,34 @@
               </div>
             </article>
 
+            <article class="glass-card book-recommend-card">
+              <div class="experience-body">
+                <h3>Recommend Me a Book</h3>
+                <p class="experience-meta">Quick note box</p>
+                <p>
+                  Drop a recommendation and hit send. Add your name if you want, or leave it blank and stay anonymous.
+                </p>
+                <form
+                  class="book-recommend-form"
+                  action="https://formsubmit.co/ybekele@usc.edu"
+                  method="POST"
+                >
+                  <input type="hidden" name="_subject" value="New book recommendation from portfolio" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="text" name="name" placeholder="Your name (optional)" autocomplete="name" />
+                  <textarea
+                    name="recommendation"
+                    rows="4"
+                    placeholder="Book title + why you recommend it"
+                    required
+                  ></textarea>
+                  <button type="submit" class="glass-button">Send</button>
+                </form>
+                <p class="recommend-note">Thanks for sharing a recommendation.</p>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
